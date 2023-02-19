@@ -16,7 +16,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	srand(time(NULL));
-	// Задача 1.
+	// Exercise 1.
 	/*
 	Написать функцию, выводящую на экран прямоугольник с высотой N и шириной K.
 	Write a function that displays a rectangle with height N and width K.
@@ -30,7 +30,7 @@ int main() {
 	build_rectangle(N, K);*/
 
 
-	// Задача 2.
+	// Exercise 2.
 	/*
 	Написать функцию, вычисляющую факториал переданного ей числа.
 	Write a function that calculates the factorial of the number passed to it.
@@ -42,7 +42,7 @@ int main() {
 	std::cout << "!" << N << " = " << factorial(N) << '\n';*/
 
 
-	// Задача 3.
+	// Exercise 3.
 	/*
 	Написать функцию, которая проверяет, является ли
 	переданное ей число простым? Число называется простым,
@@ -57,7 +57,7 @@ int main() {
 	prime_number(N);*/
 
 
-	// Задача 4.
+	// Exercise 4.
 	/*
 		Написать функцию, определяющую минимум и максимум
 	(значение и номер) элементов передаваемого ей массива.
@@ -75,7 +75,7 @@ int main() {
 	print_arr(arr, size);
 	max_min_el_arr(arr, size);*/
 
-	// Задача 5.
+	// Exercise 5.
 	/*
 		Написать функцию, меняющую порядок следования
 	элементов передаваемого ей массива на противоположный.
