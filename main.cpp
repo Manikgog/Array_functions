@@ -4,27 +4,28 @@
 #include <cstdlib>
 #include <ctime>
 
-void build_rectangle(int n, int k); // функция для построения прямоугольника
-int factorial(int n);				// функция для вычисления факториала
-void prime_number(int n);			// функция для опредения простоты числа
-void fill_arr(int* arr, const int size, int low, int hi);	// функция для заполнения массива числами из указанного промежутка
-void print_arr(int* arr, const int size);					// фукнция для распечатки массива
-void max_min_el_arr(int* arr, const int size);				// функция для вывода максимального и минимального элемента массива и их индексов
-void reverse_arr(int* arr, const int size);					// функция для разворота массива
+void build_rectangle(int n, int k); // функция для построения прямоугольника  function for building a rectangle
+int factorial(int n);				// функция для вычисления факториала   function for calculating the factorial
+void prime_number(int n);			// функция для опредения простоты числа	function for determining the simplicity of a number
+void fill_arr(int* arr, const int size, int low, int hi);	// функция для заполнения массива числами из указанного промежутка    function for filling an array with numbers from a specified interval
+void print_arr(int* arr, const int size);					// фукнция для распечатки массива     function for printing an array
+void max_min_el_arr(int* arr, const int size);				// функция для вывода максимального и минимального элемента массива и их индексов a function for displaying the maximum and minimum elements of an array and their indexes
+void reverse_arr(int* arr, const int size);					// функция для разворота массива    function for the reversal of the array
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	SetConsoleCP(1251); // установка кодовой страницы на ввод текста
+	SetConsoleCP(1251);
 	srand(time(NULL));
 	// Задача 1.
 	/*
 	Написать функцию, выводящую на экран прямоугольник с высотой N и шириной K.
+	Write a function that displays a rectangle with height N and width K.
 	*/
 	int N, K;
-	/*std::cout << "Программа для вывода на экран прямоугольника высотой N и шириной K.\n";
-	std::cout << "Введите высоту прямоугольника -> ";
+	/*std::cout << "A program for displaying a rectangle with height N and width K.\n";
+	std::cout << "Enter the height of the rectangle -> ";
 	std::cin >> N;
-	std::cout << "Введите ширину прямоугольника -> ";
+	std::cout << "Enter the width of the rectangle -> ";
 	std::cin >> K;
 	build_rectangle(N, K);*/
 
@@ -32,9 +33,10 @@ int main() {
 	// Задача 2.
 	/*
 	Написать функцию, вычисляющую факториал переданного ей числа.
+	Write a function that calculates the factorial of the number passed to it.
 	*/
-	/*std::cout << "Программа для расчёта факториала введённого числа.\n";
-	std::cout << "Введите число -> ";
+	/*std::cout << "A program for calculating the factorial of the entered number.\n";
+	std::cout << "Enter a number -> ";
 	std::cin >> N;
 
 	std::cout << "!" << N << " = " << factorial(N) << '\n';*/
@@ -45,9 +47,12 @@ int main() {
 	Написать функцию, которая проверяет, является ли
 	переданное ей число простым? Число называется простым,
 	если оно делится без остатка только на себя и на единицу.
+		Write a function that checks whether
+	the number passed to it is prime? A number is called prime
+	if it is divisible without remainder only by itself and by one.
 	*/
-	/*std::cout << "Программа для определения является ли введённое число простым.\n";
-	std::cout << "Введите число -> ";
+	/*std::cout << "A program to determine whether the entered number is prime.\n";
+	std::cout << "Enter number -> ";
 	std::cin >> N;
 	prime_number(N);*/
 
@@ -55,15 +60,17 @@ int main() {
 	// Задача 4.
 	/*
 		Написать функцию, определяющую минимум и максимум
-	(значение и номер) элементов передаваемого ей массива
+	(значение и номер) элементов передаваемого ей массива.
+		Write a function defining the minimum and maximum
+	(value and number) of the elements of the array passed to it.
 	*/
-	/*std::cout << "Программа для определения максимального и минимального элементов массива и их индексов.\n";
+	/*std::cout << "A program for determining the maximum and minimum elements of an array and their indexes.\n";
 	
 	const int size = 10;
 	int arr[size];
 	int hi = 20;
 	int low = 10;
-	std::cout << "Массив:\n";
+	std::cout << "Array:\n";
 	fill_arr(arr, size, 10, 20);
 	print_arr(arr, size);
 	max_min_el_arr(arr, size);*/
@@ -72,12 +79,14 @@ int main() {
 	/*
 		Написать функцию, меняющую порядок следования
 	элементов передаваемого ей массива на противоположный.
+		Write a function that changes the order of
+	the elements of the array passed to it to the opposite.
 	*/
 	const int size1 = 10;
 	int arr1[size1];
 	int hi1 = 50;
 	int low1 = 1;
-	std::cout << "Массив:\n";
+	std::cout << "Array:\n";
 	fill_arr(arr1, size1, low1, hi1);
 	print_arr(arr1, size1);
 	reverse_arr(arr1, size1);
@@ -108,8 +117,8 @@ void max_min_el_arr(int* arr, const int length) {
 			min_index = i;
 		}
 	}
-	std::cout << "Максимальный элемент массива -> " << max << " c индексом " << max_index << '\n';
-	std::cout << "Минимальный элемент массива -> " << min << " c индексом " << min_index << '\n';
+	std::cout << "Maximum array element -> " << max << " with index " << max_index << '\n';
+	std::cout << "Minimum array element -> " << min << " with index " << min_index << '\n';
 }
 
 void print_arr(int* arr, const int size) {
@@ -131,11 +140,11 @@ void fill_arr(int* arr, const int size, int low, int hi) {
 void prime_number(int n) {
 	for (int i = 2; i <= n / 2; ++i) {
 		if (n % i == 0) {
-			std::cout << "Число " << n << " не простое.\n";
+			std::cout << "The number " << n << " is not simple.\n";
 			return;
 		}
 	}
-	std::cout << "Число " << n << " простое.\n";
+	std::cout << "The number " << n << " is simple.\n";
 	return;
 }
 
